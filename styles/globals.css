@@ -4,7 +4,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;500;700&display=swap');
 
+:root {
+  --commandColor: rgba(255, 255, 255, 0.05);
+  --primaryColor: #fca311;
+}
+
 body {
   @apply bg-background-dark text-gray-50;
   -webkit-font-smoothing: antialiased;
+}
+
+.kbar-blur {
+  background-color: #1a1c1e;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .kbar-blur {
+    background-color: var(--commandColor);
+    -webkit-backdrop-filter: saturate(300%) blur(25px);
+    backdrop-filter: saturate(300%) blur(25px);
+  }
+}
+
+kbd {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 5px;
+  border-radius: 4px;
+  transition: background var(--transitions-duration) ease-in-out;
+  font-size: 14px;
+  font-weight: bold;
 }
