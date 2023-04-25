@@ -20,7 +20,7 @@ const Home: NextPage<PageProps> = (props) => {
     <>
       <PageHead {...props} />
       <Layout>
-        <div className="max-w-3xl w-full h-full m-auto flex items-center">
+        <div className="max-w-3xl w-full m-auto flex items-start">
           <div className="flex flex-col w-full p-4 gap-10">
             <h1 className="text-4xl font-bold text-highlight">
               About Me

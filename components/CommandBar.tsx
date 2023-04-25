@@ -15,6 +15,7 @@ import contactIcon from '../public/static/icons/contact.json'
 import aboutIcon from '../public/static/icons/about.json'
 import workIcon from '../public/static/icons/work.json'
 import projectsIcon from '../public/static/icons/projects.json'
+import homeIcon from '../public/static/icons/home.json'
 
 type Props = {
   children?: React.ReactNode
@@ -25,16 +26,34 @@ const CommandBar: React.FC<Props> = (props) => {
   const workRef = useRef<LottieRefCurrentProps>(null)
   const projectsRef = useRef<LottieRefCurrentProps>(null)
   const contactRef = useRef<LottieRefCurrentProps>(null)
+  const homeRef = useRef<LottieRefCurrentProps>(null)
   const router = useRouter()
 
   const actions = [
+    {
+      id: 'home',
+      name: 'Home',
+      shortcut: ['h'],
+      keywords: 'go-home',
+      section: 'Pages',
+      perform: () => router.push('/'),
+      icon: (
+        <Lottie
+          lottieRef={homeRef}
+          style={iconStyle}
+          animationData={homeIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
+    },
     {
       id: 'about',
       name: 'About',
       shortcut: ['a'],
       keywords: 'go-about',
       section: 'Pages',
-      perform: () => router.push('/'),
+      perform: () => router.push('/about'),
       icon: (
         <Lottie
           lottieRef={aboutRef}
