@@ -33,6 +33,7 @@ const CommandBar: React.FC<Props> = (props) => {
       name: 'About',
       shortcut: ['a'],
       keywords: 'go-about',
+      section: 'Pages',
       perform: () => router.push('/'),
       icon: (
         <Lottie
@@ -45,11 +46,12 @@ const CommandBar: React.FC<Props> = (props) => {
       ),
     },
     {
-      id: 'work',
-      name: 'Work',
+      id: 'career',
+      name: 'My Career',
       shortcut: ['w'],
       keywords: 'go-work',
-      perform: () => router.push('/work'),
+      section: 'Pages',
+      perform: () => router.push('/career'),
       icon: (
         <Lottie
           lottieRef={workRef}
@@ -65,6 +67,7 @@ const CommandBar: React.FC<Props> = (props) => {
       name: 'Projects',
       shortcut: ['p'],
       keywords: 'go-projects',
+      section: 'Pages',
       perform: () => router.push('/projects'),
       icon: (
         <Lottie
@@ -81,6 +84,7 @@ const CommandBar: React.FC<Props> = (props) => {
       name: 'Contact',
       shortcut: ['c'],
       keywords: 'go-contact',
+      section: 'Pages',
       perform: () => router.push('/contact'),
       icon: (
         <Lottie
@@ -91,6 +95,23 @@ const CommandBar: React.FC<Props> = (props) => {
           autoplay={false}
         />
       ),
+    },
+    {
+      id: 'linkedin',
+      name: 'Linkedin',
+      keywords: 'go-linkedin',
+      section: 'Follow me',
+      perform: () =>
+        window.open('https://www.linkedin.com/in/celso-junior', '_blank'),
+      icon: <i className="ri-linkedin-line" style={iconStyle}></i>,
+    },
+    {
+      id: 'git',
+      name: 'Github',
+      keywords: 'go-giy',
+      section: 'Follow me',
+      perform: () => window.open('https://github.com/clsjunnior', '_blank'),
+      icon: <i className="ri-github-line" style={iconStyle}></i>,
     },
   ]
 
@@ -137,17 +158,25 @@ function RenderResults() {
 const ResultItem = React.forwardRef<HTMLDivElement>(
   ({ action, active }: any, ref: any) => {
     if (active) {
-      action?.icon?.props.lottieRef.current?.play()
+      action?.icon?.props.lottieRef &&
+        action?.icon?.props.lottieRef.current?.play()
     } else {
-      action?.icon?.props.lottieRef.current?.stop()
+      action?.icon?.props.lottieRef &&
+        action?.icon?.props.lottieRef.current?.stop()
     }
 
     return (
       <div
         ref={ref as any}
         style={getResultStyle(active)}
-        onMouseEnter={() => action?.icon?.props.lottieRef.current?.play()}
-        onMouseLeave={() => action?.icon?.props.lottieRef.current?.stop()}
+        onMouseEnter={() =>
+          action?.icon?.props.lottieRef &&
+          action?.icon?.props.lottieRef.current?.play()
+        }
+        onMouseLeave={() =>
+          action?.icon?.props.lottieRef &&
+          action?.icon?.props.lottieRef.current?.stop()
+        }
       >
         <div style={actionStyle}>
           {action.icon && action.icon}
@@ -212,6 +241,11 @@ const groupNameStyle: CSSProperties = {
 const iconStyle: CSSProperties = {
   width: 24,
   height: 24,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color: 'var(--primaryColor)',
+  fontSize: '1.2rem',
 }
 
 const kbdStyle: CSSProperties = {

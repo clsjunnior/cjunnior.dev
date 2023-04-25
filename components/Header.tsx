@@ -1,12 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import clsx from 'clsx'
 import { useKBar } from 'kbar'
+import { useRouter } from 'next/router'
 
 const Header: React.FC = () => {
   const { query } = useKBar()
+  const router = useRouter()
 
-  const pages: string[] = ['About', 'Work Timeline', 'Projects']
-
+  const pages: string[] = ['About', 'Career', 'Projects']
   return (
     <header className="w-full flex align-middle justify-between px-6 py-6">
       <Link href="/" passHref>
@@ -21,12 +23,20 @@ const Header: React.FC = () => {
             return (
               <li
                 key={page}
-                className="px-4 py-2 rounded-md cursor-pointer transition delay-75 hover:bg-background"
+                className={clsx(
+                  `px-4 py-2 rounded-md cursor-pointer transition-colors text-gray-300 hover:text-gray-500`,
+                  [
+                    {
+                      'underline underline-offset-8 decoration-2 decoration-highlight':
+                        path === router.pathname,
+                    },
+                  ]
+                )}
               >
                 <Link
                   href={path}
                   passHref
-                  className="text-gray-200 font-mono text-md leading-relaxed"
+                  className="font-mono text-md leading-relaxed"
                 >
                   {page}
                 </Link>

@@ -19,11 +19,6 @@ const Footer: React.FC = () => {
       name: `linkedin`,
       icon: `ri-linkedin-line`,
     },
-    {
-      href: `https://www.instagram.com/c_junnior`,
-      name: `instagram`,
-      icon: `ri-instagram-line`,
-    },
   ]
 
   return (
