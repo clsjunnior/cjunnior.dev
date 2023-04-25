@@ -4,7 +4,7 @@ import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import PageHead from '../components/Head'
 import Layout from '../components/Layout'
 
-import homeIcon from '../public/static/icons/homeMain.json'
+import homeIcon from '../public/static/icons/homeMainDuo.json'
 import ShortcutHome from '../components/Shortcut'
 
 type PageProps = {
@@ -47,8 +47,8 @@ const Home: NextPage<PageProps> = (props) => {
               lottieRef={homeRef}
               style={iconStyle}
               animationData={homeIcon}
-              loop={false}
-              autoplay
+              loop
+              autoplay={false}
             />
             <h1 className="text-4xl font-bold text-highlight">
               Celso Junior
