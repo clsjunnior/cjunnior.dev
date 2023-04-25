@@ -2,16 +2,10 @@ import { CSSProperties, useRef } from 'react'
 import type { NextPage, GetStaticProps } from 'next'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import PageHead from '../components/Head'
-import Layout from '../components/Layout'
+import Layout, { PageProps } from '../components/Layout'
 
 import homeIcon from '../public/static/icons/homeMainDuo.json'
 import ShortcutHome from '../components/Shortcut'
-
-type PageProps = {
-  title: string
-  description: string
-  image: string
-}
 
 export const getStaticProps: GetStaticProps = async () => {
   return {

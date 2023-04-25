@@ -3,16 +3,10 @@ import type { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
 import { useRef, CSSProperties } from 'react'
 import PageHead from '../components/Head'
-import Layout from '../components/Layout'
+import Layout, { PageProps } from '../components/Layout'
 import PrimaryButton from '../components/PrimaryButton'
 
 import notFoundIcon from '../public/static/icons/404.json'
-
-type PageProps = {
-  title: string
-  description: string
-  image: string
-}
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
