@@ -20,23 +20,23 @@ const Home: NextPage<PageProps> = (props) => {
     <>
       <PageHead {...props} />
       <Layout>
-        <div className="max-w-3xl w-full m-auto flex items-start">
+        <div className="max-w-3xl w-full m-auto flex items-start p-6 sm:p-0">
           <div className="flex flex-col w-full p-4 gap-10">
-            <h1 className="text-4xl font-bold text-highlight">
+            <h1 className="text-4xl font-bold text-highlight text-center">
               About Me
               <blockquote className="text-gray-300 font-bold text-sm italic block mt-1">
                 &quot;Difficult is relative&quot;
               </blockquote>
             </h1>
 
-            <div className="flex rounded-lg bg-gray-900 border-gray-500 border-2 p-5 gap-8 items-center">
+            <div className="flex flex-col sm:flex-row rounded-lg bg-gray-900 p-5 gap-8 items-center">
               <Image
                 className="w-40 h-40 p-1 rounded-xl shadow-md"
                 src={avatar}
                 alt="Celso Junior avatar"
               />
 
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 items-center sm:items-start">
                 <span className="text-gray-300 font-medium text-xs">
                   Looking for my CV?
                 </span>
@@ -50,7 +50,7 @@ const Home: NextPage<PageProps> = (props) => {
                 </a>
               </div>
 
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 items-center sm:items-start">
                 <span className="text-gray-300 font-medium text-xs">
                   Want to get in touch?
                 </span>
@@ -62,7 +62,7 @@ const Home: NextPage<PageProps> = (props) => {
                 </a>
               </div>
 
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 items-center sm:items-start">
                 <span className="text-gray-300 font-medium text-xs">
                   Want to connect?
                 </span>

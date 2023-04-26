@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         </span>
       </Link>
       <nav>
-        <ul className="flex justify-center items-center gap-4">
+        <ul className="hidden sm:flex justify-center items-center gap-4">
           {pages.map((page) => {
             const path = `/${page.toLowerCase()}`
             return (
@@ -48,7 +48,8 @@ const Header: React.FC = () => {
       <aside>
         <button type="button" onClick={query.toggle}>
           <span className="flex justify-center items-center w-12 h-12 rounded-lg cursor-pointer delay-75 bg-background transition-transform hover:scale-105 text-lg">
-            <i className="ri-command-line"></i>
+            <i className="ri-command-line hidden sm:block"></i>
+            <i className="ri-menu-line block sm:hidden"></i>
           </span>
         </button>
       </aside>

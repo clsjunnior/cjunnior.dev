@@ -23,7 +23,7 @@ type toolsListType = {
 }
 
 function NextImage(props: ImageProps) {
-  return <Image className="w-8 h-8" {...props} />
+  return <Image className="w-5 h-5 sm:w-8 sm:h-8" {...props} />
 }
 
 const ToolsList: React.FC = () => {
@@ -103,7 +103,7 @@ const ToolsList: React.FC = () => {
         <span className="font-bold text-highlight"> developer</span> and some
         that I have used in my career.
       </p>
-      <div className="flex flex-wrap gap-4 items-center">
+      <div className="flex flex-wrap gap-4 items-center max-h-[250px] sm:max-h-max overflow-y-auto sm:overflow-hidden">
         {toolsList.map((tool) => (
           <div
             key={tool.title}
