@@ -127,7 +127,7 @@ const Home: NextPage<PageProps> = (props) => {
                     {workItem.startDate}{' '}
                     {!workItem.endDate ? `— Now` : `— ${workItem.endDate}`}
                   </time>
-                  <h3 className="text-lg font-semibold text-gray-100 leading-relaxed mb-3">
+                  <h1 className="text-lg font-semibold text-gray-100 leading-relaxed mb-3">
                     {workItem.link ? (
                       <a
                         href={workItem.link}
@@ -144,7 +144,7 @@ const Home: NextPage<PageProps> = (props) => {
                     <span className="text-xs font-medium italic text-gray-400 block">
                       {workItem.location}
                     </span>
-                  </h3>
+                  </h1>
                   {workItem.descriptions.map((f) => (
                     <p
                       className="mb-4 text-sm font-mono text-gray-400"

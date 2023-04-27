@@ -12,7 +12,10 @@ const Header: React.FC = () => {
   return (
     <header className="w-full flex align-middle justify-between px-6 py-6">
       <Link href="/" passHref>
-        <span className="flex cursor-pointer justify-center items-center w-12 h-12 bg-background rounded-lg leading-none text-highlight font-bold font-mono text-lg transition-transform hover:scale-105">
+        <span
+          aria-label="Celso Junior"
+          className="flex cursor-pointer justify-center items-center w-12 h-12 bg-background rounded-lg leading-none text-highlight font-bold font-mono text-lg transition-transform hover:scale-105"
+        >
           CJ
         </span>
       </Link>
@@ -46,7 +49,7 @@ const Header: React.FC = () => {
         </ul>
       </nav>
       <aside>
-        <button type="button" onClick={query.toggle}>
+        <button aria-label="Open Menu" type="button" onClick={query.toggle}>
           <span className="flex justify-center items-center w-12 h-12 rounded-lg cursor-pointer delay-75 bg-background transition-transform hover:scale-105 text-lg">
             <i className="ri-command-line hidden sm:block"></i>
             <i className="ri-menu-line block sm:hidden"></i>

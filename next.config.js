@@ -2,9 +2,10 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
-	// experimental: {
-	// 	appDir: true,
-	// },
+	i18n: {
+		locales: [ "en", "pt-br" ],
+		defaultLocale: "en",
+	},
 }
 
 module.exports = nextConfig

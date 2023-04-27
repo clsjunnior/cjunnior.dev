@@ -45,6 +45,7 @@ const Home: NextPage<PageProps> = (props) => {
                   href="https://read.cv/celsojunior"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="My CV at read"
                 >
                   There you go!
                 </a>
@@ -57,6 +58,7 @@ const Home: NextPage<PageProps> = (props) => {
                 <a
                   className="font-bold text-highlight text-sm hover:text-highlight-dark transition-colors"
                   href="mailto:hello@cjunnior.dev"
+                  aria-label="email"
                 >
                   hello@cjunnior.dev
                 </a>
@@ -69,17 +71,19 @@ const Home: NextPage<PageProps> = (props) => {
                 <div className="flex gap-4 items-center">
                   <a
                     className="font-bold text-highlight text-sm hover:text-highlight-dark transition-colors"
-                    href="https://read.cv/celsojunior"
+                    href="https://www.linkedin.com/in/celso-junior"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Linkedin"
                   >
                     <i className="ri-linkedin-fill"></i>
                   </a>
                   <a
                     className="font-bold text-highlight text-sm hover:text-highlight-dark transition-colors"
-                    href="https://read.cv/celsojunior"
+                    href="https://github.com/clsjunnior"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Github"
                   >
                     <i className="ri-github-fill"></i>
                   </a>

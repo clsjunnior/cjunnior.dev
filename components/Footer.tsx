@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <ul className="flex gap-6 sm:gap-12 justify-between sm:justify-center items-center">
         {footerLinks.map((link, key) => (
           <li
-            className="text-sm tracking-wide text-gray-500 hover:text-white transition-colors hover:cursor-pointer"
+            className="text-sm tracking-wide text-gray-400 hover:text-white transition-colors hover:cursor-pointer"
             key={key}
           >
             {link.internal ? (
