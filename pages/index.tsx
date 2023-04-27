@@ -31,7 +31,7 @@ const Home: NextPage<PageProps> = (props) => {
     <>
       <PageHead {...props} />
       <Layout>
-        <div className="max-w-full sm:max-w-3xl w-full h-full m-auto flex items-center p-6 sm:p-0">
+        <div className="max-w-full sm:max-w-3xl w-full m-auto flex items-center p-6 sm:p-0">
           <div
             className="gap-6 flex flex-col items-start"
             onMouseEnter={() => homeRef?.current?.play()}

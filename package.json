@@ -9,6 +9,7 @@
     "lint": "next lint --fix && prettier -w"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.0",
     "kbar": "^0.1.0-beta.36",
     "lottie-react": "^2.4.0",
     "next": "^13.2.4",
