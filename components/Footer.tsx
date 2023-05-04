@@ -19,14 +19,19 @@ const Footer: React.FC = () => {
       name: `linkedin`,
       icon: `ri-linkedin-line`,
     },
+    {
+      href: `https://github.com/clsjunnior/cjunnior.dev`,
+      name: `source`,
+      icon: `ri-code-line`,
+    },
   ]
 
   return (
-    <footer className="w-full p-6">
+    <footer className="w-full p-6 flex flex-col justify-center items-center gap-4">
       <ul className="flex gap-6 sm:gap-12 justify-between sm:justify-center items-center">
         {footerLinks.map((link, key) => (
           <li
-            className="text-sm tracking-wide text-gray-400 hover:text-white transition-colors hover:cursor-pointer"
+            className="text-sm tracking-wide text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-highlight transition-colors hover:cursor-pointer"
             key={key}
           >
             {link.internal ? (
@@ -50,6 +55,11 @@ const Footer: React.FC = () => {
           </li>
         ))}
       </ul>
+      <div className="flex items-center">
+        <span className="text-[0.7rem] font-mono tracking-wide text-gray-400">
+          2023 - by myself
+        </span>
+      </div>
     </footer>
   )
 }

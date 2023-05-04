@@ -77,7 +77,7 @@ const ToolsList: React.FC = () => {
         <NextImage
           src={aws}
           alt="aws icon"
-          style={{ filter: 'contrast(0.5)' }}
+          className="contrast-50 dark:contrast-100 w-5 h-5 sm:w-8 sm:h-8"
         />
       ),
       title: 'AWS Cloud',
@@ -107,10 +107,10 @@ const ToolsList: React.FC = () => {
         {toolsList.map((tool) => (
           <div
             key={tool.title}
-            className="flex gap-2 items-center bg-background rounded-lg py-2 px-4 border-gray-700 border-2"
+            className="flex gap-2 items-center bg-background dark:bg-gray-50 rounded-lg py-2 px-4 border-gray-700 dark:border-gray-200 border-2"
           >
             {tool.icon}
-            <span className="text-gray-300 text-xs font-bold">
+            <span className="text-gray-300 dark:text-gray-600 text-xs font-bold">
               {tool.title}
             </span>
           </div>

@@ -132,6 +132,15 @@ const CommandBar: React.FC<Props> = (props) => {
       perform: () => window.open('https://github.com/clsjunnior', '_blank'),
       icon: <i className="ri-github-line" style={iconStyle}></i>,
     },
+    {
+      id: 'general',
+      name: 'Source Code',
+      keywords: 'go-source',
+      section: 'General',
+      perform: () =>
+        window.open('https://github.com/clsjunnior/cjunnior.dev', '_blank'),
+      icon: <i className="ri-code-line" style={iconStyle}></i>,
+    },
   ]
 
   return (

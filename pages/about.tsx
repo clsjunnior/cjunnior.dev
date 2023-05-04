@@ -22,14 +22,14 @@ const Home: NextPage<PageProps> = (props) => {
       <Layout>
         <div className="max-w-3xl w-full m-auto flex items-start p-6 sm:p-0">
           <div className="flex flex-col w-full p-4 gap-10">
-            <h1 className="text-4xl font-bold text-highlight text-center">
+            <h1 className="text-4xl font-bold text-highlight text-center sm:text-left">
               About Me
-              <blockquote className="text-gray-300 font-bold text-sm italic block mt-1">
+              <blockquote className="text-gray-300 dark:text-gray-600 font-bold text-sm italic block mt-1">
                 &quot;Difficult is relative&quot;
               </blockquote>
             </h1>
 
-            <div className="flex flex-col sm:flex-row rounded-lg bg-gray-900 p-5 gap-8 items-center">
+            <div className="flex flex-col sm:flex-row rounded-lg bg-gray-900 dark:bg-gray-50 p-5 gap-8 items-center">
               <Image
                 className="w-40 h-40 p-1 rounded-xl shadow-md"
                 src={avatar}
@@ -37,7 +37,7 @@ const Home: NextPage<PageProps> = (props) => {
               />
 
               <div className="flex flex-col gap-1 items-center sm:items-start">
-                <span className="text-gray-300 font-medium text-xs">
+                <span className="text-gray-300 dark:text-gray-600 font-medium text-xs">
                   Looking for my CV?
                 </span>
                 <a
@@ -52,7 +52,7 @@ const Home: NextPage<PageProps> = (props) => {
               </div>
 
               <div className="flex flex-col gap-1 items-center sm:items-start">
-                <span className="text-gray-300 font-medium text-xs">
+                <span className="text-gray-300 dark:text-gray-600 font-medium text-xs">
                   Want to get in touch?
                 </span>
                 <a
@@ -65,7 +65,7 @@ const Home: NextPage<PageProps> = (props) => {
               </div>
 
               <div className="flex flex-col gap-1 items-center sm:items-start">
-                <span className="text-gray-300 font-medium text-xs">
+                <span className="text-gray-300 dark:text-gray-600 font-medium text-xs">
                   Want to connect?
                 </span>
                 <div className="flex gap-4 items-center">
@@ -92,7 +92,7 @@ const Home: NextPage<PageProps> = (props) => {
             </div>
 
             <div>
-              <p className="mb-8 text-gray-300 text-sm font-medium leading-relaxed">
+              <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
                 Hi, I am Celso 👋, a{' '}
                 <span className="font-bold text-highlight">
                   Software engineer
@@ -105,14 +105,14 @@ const Home: NextPage<PageProps> = (props) => {
                 contribute to products and services used on a large scale.
               </p>
 
-              <p className="mb-8 text-gray-300 text-sm font-medium leading-relaxed">
+              <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
                 I have a formal graduation in technology, my course was Analise
                 and System Development by Centro Universitário de Lins / Sao
                 Paulo - UNILINS. Course in which I had the honor to be elected
                 the best student of the class.
               </p>
 
-              <p className="mb-8 text-gray-300 text-sm font-medium leading-relaxed">
+              <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
                 My focus in the development area has always been the{' '}
                 <span className="font-bold text-highlight">
                   front-end and interface development
@@ -123,7 +123,7 @@ const Home: NextPage<PageProps> = (props) => {
                 MySQL and SQL Server.
               </p>
 
-              <p className="mb-8 text-gray-300 text-sm font-medium leading-relaxed">
+              <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
                 And in recent years, I`ve had opportunities in which I`ve been
                 working with{' '}
                 <span className="font-bold text-highlight">

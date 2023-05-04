@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [ './pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}' ],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			fontFamily: {
@@ -12,6 +13,7 @@ module.exports = {
 				'background-dark': '#0B1323',
 				highlight: '#FCA311',
 				'highlight-dark': '#E58E02',
+				'light-mode': '#ececec'
 			},
 		},
 	},

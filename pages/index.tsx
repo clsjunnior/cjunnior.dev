@@ -4,7 +4,7 @@ import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import PageHead from '../components/Head'
 import Layout, { PageProps } from '../components/Layout'
 
-import homeIcon from '../public/static/icons/homeMainDuo.json'
+import homeIcon from '../public/static/icons/homeMain.json'
 import ShortcutHome from '../components/Shortcut'
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -46,12 +46,12 @@ const Home: NextPage<PageProps> = (props) => {
             />
             <h1 className="text-4xl font-bold text-highlight">
               Celso Junior
-              <span className="text-gray-100 font-bold text-sm block mt-1">
+              <span className="text-gray-100 dark:text-gray-800 font-bold text-sm block mt-1">
                 Front-end Developer
               </span>
             </h1>
 
-            <p className="text-gray-300 font-medium">
+            <p className="text-gray-300 dark:text-gray-600 font-medium">
               Hello, nice to have you here. How`s it going? 👋
             </p>
             <ShortcutHome />

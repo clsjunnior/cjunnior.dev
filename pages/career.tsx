@@ -100,14 +100,14 @@ const Home: NextPage<PageProps> = (props) => {
           <div className="flex flex-col w-full p-4 gap-10">
             <h1 className="text-4xl font-bold text-highlight">
               My Career
-              <blockquote className="text-gray-300 font-bold text-sm italic block mt-1">
+              <blockquote className="text-gray-300 dark:text-gray-600 font-bold text-sm italic block mt-1">
                 as a software engineer during 7 years and counting.
               </blockquote>
             </h1>
 
             <ToolsList />
 
-            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+            <ol className="relative border-l border-gray-600 dark:border-gray-600">
               {workList.map((workItem) => (
                 <li className="mb-10 ml-4" key={workItem.title}>
                   <div
@@ -115,7 +115,7 @@ const Home: NextPage<PageProps> = (props) => {
                       `absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border`,
                       [
                         { 'bg-highlight border-highlight': !workItem.endDate },
-                        { 'bg-gray-700 border-gray-900': workItem.endDate },
+                        { 'bg-gray-600 border-gray-900': workItem.endDate },
                       ]
                     )}
                   ></div>
@@ -127,7 +127,7 @@ const Home: NextPage<PageProps> = (props) => {
                     {workItem.startDate}{' '}
                     {!workItem.endDate ? `— Now` : `— ${workItem.endDate}`}
                   </time>
-                  <h1 className="text-lg font-semibold text-gray-100 leading-relaxed mb-3">
+                  <h1 className="text-lg font-semibold text-gray-100 dark:text-gray-600 leading-relaxed mb-3">
                     {workItem.link ? (
                       <a
                         href={workItem.link}
@@ -147,7 +147,7 @@ const Home: NextPage<PageProps> = (props) => {
                   </h1>
                   {workItem.descriptions.map((f) => (
                     <p
-                      className="mb-4 text-sm font-mono text-gray-400"
+                      className="mb-4 text-sm font-mono text-gray-400 dark:text-gray-500"
                       key={f.length}
                     >
                       {f}
