@@ -23,7 +23,9 @@ type toolsListType = {
 }
 
 function NextImage(props: ImageProps) {
-  return <Image className="w-5 h-5 sm:w-8 sm:h-8" {...props} />
+  return (
+    <Image {...props} className="w-5 h-5 sm:w-8 sm:h-8" alt={props.alt || ''} />
+  )
 }
 
 const ToolsList: React.FC = () => {

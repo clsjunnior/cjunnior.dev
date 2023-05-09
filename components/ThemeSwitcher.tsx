@@ -9,7 +9,7 @@ export function SwitchTheme() {
       document.querySelector('html')?.classList.toggle('dark')
       saveTheme(isEnable ? 'light' : 'dark')
     },
-    [setEnabled, enabled]
+    [setEnabled]
   )
 
   const saveTheme = (theme: string) => {

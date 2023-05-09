@@ -12,12 +12,12 @@
     "@vercel/analytics": "^1.0.0",
     "kbar": "^0.1.0-beta.36",
     "lottie-react": "^2.4.0",
+    "mailgun.js": "^8.2.1",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@sendgrid/mail": "^7.7.0",
     "@types/node": "18.7.13",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",

@@ -1,7 +1,13 @@
-import sendgrid from '@sendgrid/mail'
 import { NextApiRequest, NextApiResponse } from 'next'
+import Mailgun from 'mailgun.js'
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '')
+const formData = require('form-data')
+const mailgun = new Mailgun(formData)
+const mg = mailgun.client({
+  username: 'api',
+  key: process.env.MAILGUN_API_KEY || 'key',
+  url: 'https://api.mailgun.net/',
+})
 
 interface SendEmailApiRequest extends NextApiRequest {
   body: {
@@ -177,12 +183,15 @@ async function sendEmail(req: SendEmailApiRequest, res: NextApiResponse) {
   try {
     const { email, message, name, subject } = req.body
 
-    await sendgrid.send({
-      to: email,
-      from: 'hello@cjunnior.dev',
-      subject: `SB - ${subject}`,
-      html: formatHtml(name, email, message),
-    })
+    await mg.messages.create(
+      'sandbox6718db5646334458bc2f794b6501b2d3.mailgun.org',
+      {
+        from: email,
+        to: 'hello@cjunnior.dev',
+        subject: `SB - ${subject}`,
+        html: formatHtml(name, email, message),
+      }
+    )
   } catch (error: any) {
     console.log(error)
     return res.status(500).send({ error: error.message })
