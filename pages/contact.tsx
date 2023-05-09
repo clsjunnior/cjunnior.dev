@@ -111,7 +111,7 @@ const Contact: NextPage<PageProps> = (props) => {
               <div className="w-full flex justify-end">
                 <button
                   type="submit"
-                  className="text-white bg-highlight hover:bg-highlight-dark focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center inline-flex items-center transition-colors disabled:cursor-not-allowed disabled:bg-orange-300 disabled:opacity-80"
+                  className="text-white bg-highlight hover:bg-highlight-dark focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center inline-flex items-center justify-center transition-colors disabled:cursor-not-allowed disabled:bg-orange-300 disabled:opacity-80"
                   disabled={loading}
                 >
                   Send message

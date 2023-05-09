@@ -81,23 +81,23 @@ const CommandBar: React.FC<Props> = (props) => {
         />
       ),
     },
-    {
-      id: 'projects',
-      name: 'Projects',
-      shortcut: ['p'],
-      keywords: 'go-projects',
-      section: 'Pages',
-      perform: () => router.push('/projects'),
-      icon: (
-        <Lottie
-          lottieRef={projectsRef}
-          style={iconStyle}
-          animationData={projectsIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
+    // {
+    //   id: 'projects',
+    //   name: 'Projects',
+    //   shortcut: ['p'],
+    //   keywords: 'go-projects',
+    //   section: 'Pages',
+    //   perform: () => router.push('/projects'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={projectsRef}
+    //       style={iconStyle}
+    //       animationData={projectsIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
     {
       id: 'contact',
       name: 'Contact',
