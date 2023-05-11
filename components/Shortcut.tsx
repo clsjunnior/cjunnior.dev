@@ -16,19 +16,34 @@ export default function ShortcutHome() {
 
     if (isMobile) {
       return (
-        <PrimaryButton type="button" onClick={query.toggle}>
+        <PrimaryButton
+          type="button"
+          onClick={query.toggle}
+          data-testid="kbar-mobile"
+          title="kbar mobile button"
+        >
           Tap to start →
         </PrimaryButton>
       )
     } else if (isMac) {
       return (
-        <PrimaryButton type="button" onClick={query.toggle}>
+        <PrimaryButton
+          type="button"
+          onClick={query.toggle}
+          data-testid="kbar-mac"
+          title="kbar mac button"
+        >
           Press <kbd>⌘</kbd> <kbd>K</kbd> to start →
         </PrimaryButton>
       )
     } else {
       return (
-        <PrimaryButton type="button" onClick={query.toggle}>
+        <PrimaryButton
+          type="button"
+          onClick={query.toggle}
+          data-testid="kbar-desktop"
+          title="kbar desktop button"
+        >
           Press <kbd>ctrl</kbd> <kbd>K</kbd> to start →
         </PrimaryButton>
       )
