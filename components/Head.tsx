@@ -10,7 +10,7 @@ type PageHeadProps = {
 const PageHead: React.FC<PageHeadProps> = ({ title, description, image }) => {
   return (
     <Head>
-      <title role="heading">{title}</title>
+      <title>{title}</title>
       <meta content={title} property="og:title" />
       <meta content={description} name="description" />
       <meta content={description} property="og:description" />

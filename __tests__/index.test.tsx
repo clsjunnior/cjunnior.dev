@@ -10,7 +10,6 @@ jest.mock('kbar')
 
 describe('Home page - Desktop Kbar Button', () => {
   it('Ensure Kbar button has rendering at Desktop with the correct label', async () => {
-    // ;(useRouter as jest.Mock).mockReturnValue({})
     ;(useKBar as jest.Mock).mockImplementation(() => ({
       query: jest.fn().mockResolvedValue([]),
     }))
