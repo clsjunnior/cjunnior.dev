@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import type { NextPage, GetStaticProps } from 'next'
-import Image, { ImageProps } from 'next/image'
 import PageHead from '../components/Head'
 import Layout, { PageProps } from '../components/Layout'
 import ToolsList from '../components/ToolsList'
@@ -28,11 +27,11 @@ const Home: NextPage<PageProps> = (props) => {
   const workList: workListType[] = [
     {
       startDate: 'Oct 2022',
-      title: 'Front-End Developer at NTConsult',
+      title: 'Senior Front-End Developer at NTConsult',
       location: 'Porto Alegre, Brazil',
       descriptions: [
-        'Acting as a front-end developer building a back-office platform for the client Destaxa. Using mainly the best practices of React in conjunction with Next for the development of the platform.',
-        'Main technologies used: React, Next, Typescript, Keycloak SSO, Jest, design system, monorepo, NodeJs, git, gitflow, Figma, Jira and Code review.',
+        `Working as a senior front-end developer and during this period I worked on national and international projects, always focusing on React and its ecosystem. It's part of my routine, building reusable and testable components, be close and aligned with UI/UX to build interfaces, teamwork, code review, help with technical decisions and contact with the business area to develop better features and improvements.`,
+        'Main technologies used: React, Redux, Next, Typescript, SSO, Jest, React Testing library, Front-end architecture, Design System, NodeJs, GIT, Gitflow, Figma, Jira and Code review.',
       ],
       link: 'https://ntconsult.com.br/',
     },
