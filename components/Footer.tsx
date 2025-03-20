@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
       </ul>
       <div className="flex items-center">
         <span className="text-[0.7rem] font-mono tracking-wide text-gray-400">
-          2023 - by myself
+          2025 - by myself
         </span>
       </div>
     </footer>

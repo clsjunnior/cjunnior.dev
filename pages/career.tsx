@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import moment from 'moment'
 import type { NextPage, GetStaticProps } from 'next'
 import PageHead from '../components/Head'
 import Layout, { PageProps } from '../components/Layout'
@@ -23,6 +24,25 @@ type workListType = {
   link?: string
 }
 
+interface DateRange {
+  startDate: string
+  endDate?: string
+}
+
+const calculateYearsAndMonths = ({ startDate, endDate }: DateRange): string => {
+  const start = moment(startDate, 'MMM YYYY')
+  const end = endDate ? moment(endDate, 'MMM YYYY') : moment()
+
+  const years = end.diff(start, 'years')
+  const months = end.diff(start.clone().add(years, 'years'), 'months')
+
+  if (years === 0) {
+    return `${months} mos`
+  }
+
+  return `${years} yrs ${months} mos`
+}
+
 const Home: NextPage<PageProps> = (props) => {
   const workList: workListType[] = [
     {
@@ -30,14 +50,15 @@ const Home: NextPage<PageProps> = (props) => {
       title: 'Senior Front-End Developer at NTConsult',
       location: 'Porto Alegre, Brazil',
       descriptions: [
-        `Working as a senior front-end developer and during this period I worked on national and international projects, always focusing on React and its ecosystem. It's part of my routine, building reusable and testable components, be close and aligned with UI/UX to build interfaces, teamwork, code review, help with technical decisions and contact with the business area to develop better features and improvements.`,
-        'Main technologies used: React, Redux, Next, Typescript, SSO, Jest, React Testing library, Front-end architecture, Design System, NodeJs, GIT, Gitflow, Figma, Jira and Code review.',
+        `Working as a senior front-end developer on international projects, always focusing on React and its ecosystem.`,
+        `It is part of my routine to build reusable and testable components, to be close and aligned with UI/UX to build interfaces, teamwork, code review, help with technical decisions and contact with the business area to understand and develop new features and improvements.`,
+        'React, Redux, Next, SSR, Drupal, Typescript, SSO, Jest, React testing library, Design System, Front-end Architecture, NodeJs, Docker, GIT, Gitflow, Figma, Jira and Code review.',
       ],
       link: 'https://ntconsult.com.br/',
     },
     {
-      startDate: '2021',
-      endDate: '2022',
+      startDate: 'Aug 2021',
+      endDate: 'Oct 2022',
       title: 'Front-End Developer at Roberty Automation',
       location: 'Ribeirão Preto, Brazil',
       descriptions: [
@@ -47,8 +68,8 @@ const Home: NextPage<PageProps> = (props) => {
       link: 'https://www.roberty.app/',
     },
     {
-      startDate: '2020',
-      endDate: '2021',
+      startDate: 'Oct 2020',
+      endDate: 'Aug 2021',
       title: 'Front-End Developer at SHIFT INC',
       location: 'Sao Paulo, Brazil',
       descriptions: [
@@ -58,8 +79,8 @@ const Home: NextPage<PageProps> = (props) => {
       link: 'https://www.shiftinc.com.br/',
     },
     {
-      startDate: '2017',
-      endDate: '2020',
+      startDate: 'Aug 2017',
+      endDate: 'Oct 2020',
       title: 'Full-stack Developer at Sodré Laboratory',
       location: 'Lins, Brazil',
       descriptions: [
@@ -69,24 +90,14 @@ const Home: NextPage<PageProps> = (props) => {
       link: 'https://laboratoriosodre.com.br/',
     },
     {
-      startDate: '2017',
-      endDate: '2017',
+      startDate: 'Oct 2014',
+      endDate: 'Aug 2017',
       title:
-        'Graphic Designer at Paulista Foundation for Technology and Education',
+        'Web Developer and Graphic Designer at Paulista Foundation for Technology and Education',
       location: 'Lins, Brazil',
       descriptions: [
         `Development of printed and digital materials. Also working in web development, social networks and dissemination tools.`,
         'Main technologies used: Adobe PhotoShop, Adobe Illustrator, WordPress, HTML, CSS, PHP, Facebook ADS and SEO.',
-      ],
-    },
-    {
-      startDate: '2014',
-      endDate: '2017',
-      title: 'Web developer and Graphic Designer at CETECLins',
-      location: 'Lins, Brazil',
-      descriptions: [
-        `Development and maintenance of websites and creation of printed and digital advertising material.`,
-        'Main technologies used: Adobe PhotoShop, Adobe Illustrator, WordPress, HTML, CSS, PHP, ASP.NET, SQL Server, Mysql, Facebook ADS and SEO.',
       ],
     },
   ]
@@ -100,7 +111,9 @@ const Home: NextPage<PageProps> = (props) => {
             <h1 className="text-4xl font-bold text-highlight">
               My Career
               <blockquote className="text-gray-300 dark:text-gray-600 font-bold text-sm italic block mt-1">
-                as a software engineer during 7 years and counting.
+                as a software engineer during{' '}
+                {moment().diff(moment('Jan 2016', 'MMM YYYY'), 'years')} years
+                and counting.
               </blockquote>
             </h1>
 
@@ -124,7 +137,11 @@ const Home: NextPage<PageProps> = (props) => {
                     ])}
                   >
                     {workItem.startDate}{' '}
-                    {!workItem.endDate ? `— Now` : `— ${workItem.endDate}`}
+                    {!workItem.endDate ? `— Now` : `— ${workItem?.endDate}`} -{' '}
+                    {calculateYearsAndMonths({
+                      startDate: workItem.startDate,
+                      endDate: workItem?.endDate,
+                    })}
                   </time>
                   <h1 className="text-lg font-semibold text-gray-100 dark:text-gray-600 leading-relaxed mb-3">
                     {workItem.link ? (

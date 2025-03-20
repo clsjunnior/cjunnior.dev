@@ -47,7 +47,7 @@ const Home: NextPage<PageProps> = (props) => {
             <h1 className="text-4xl font-bold text-highlight">
               Celso Junior
               <span className="text-gray-100 dark:text-gray-800 font-bold text-sm block mt-1">
-                Front-end Developer
+                Senior Front-end Developer
               </span>
             </h1>
 
