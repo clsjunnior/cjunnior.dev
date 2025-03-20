@@ -1,3 +1,4 @@
+import moment from 'moment'
 import type { NextPage, GetStaticProps } from 'next'
 import Image from 'next/image'
 import PageHead from '../components/Head'
@@ -8,8 +9,8 @@ import avatar from '../public/static/images/avatar.jpeg'
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      title: 'About | Celso Junior - Front-end Developer',
-      description: 'Front-end Developer',
+      title: 'About | Celso Junior - Senior Front-end Developer',
+      description: 'Senior Front-end Developer',
       image: '/',
     },
   }
@@ -27,8 +28,11 @@ const Home: NextPage<PageProps> = (props) => {
               <blockquote className="text-gray-300 dark:text-gray-600 font-bold text-sm italic block mt-1">
                 &quot;Difficult is relative&quot;
               </blockquote>
+              <span className="text-gray-300 dark:text-gray-600 font-light text-xs block mt-1">
+                Senior Software Engineer | Frontend Developer | React |
+                JavaScript | Typescript | NextJs
+              </span>
             </h1>
-
             <div className="flex flex-col sm:flex-row rounded-lg bg-gray-900 dark:bg-gray-50 p-5 gap-8 items-center">
               <Image
                 className="w-40 h-40 p-1 rounded-xl shadow-md"
@@ -90,49 +94,44 @@ const Home: NextPage<PageProps> = (props) => {
                 </div>
               </div>
             </div>
-
             <div>
               <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
                 Hi, I am Celso 👋, a{' '}
                 <span className="font-bold text-highlight">
                   Software engineer
                 </span>{' '}
-                with focus on{' '}
-                <span className="font-bold text-highlight">Front-end</span> and
-                User Experience. I have about 7 years of experience with
-                technology and web development. During these years I worked in
-                several projects and companies in various segments, I could
-                contribute to products and services used on a large scale.
+                specializing in front-end development and user experience, with
+                approximately nine years of experience in technology and web
+                development. Throughout my career, I have worked on various
+                projects across different industries, contributing to
+                large-scale products and services.
               </p>
 
               <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
-                I have a formal graduation in technology, my course was Analise
-                and System Development by Centro Universitário de Lins / Sao
-                Paulo - UNILINS. Course in which I had the honor to be elected
-                the best student of the class.
+                I hold a degree in Systems Analysis and Development from Centro
+                Universitário de Lins (UNILINS), where I had the honor of being
+                recognized as the top student in my class.
               </p>
 
               <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
-                My focus in the development area has always been the{' '}
+                My primary focus has always been{' '}
                 <span className="font-bold text-highlight">
-                  front-end and interface development
+                  front-end development and interface design
                 </span>
-                , however in these years of experience I had the opportunity to
-                work as a full-stack for a few years, in this period I had
-                contact with C#, ASP.NET, PHP and relational databases such as
-                MySQL and SQL Server.
+                . However, during my career, I also worked as a full-stack
+                developer for a few years, gaining experience with C#, ASP.NET,
+                PHP, and relational databases such as MySQL and SQL Server.
               </p>
 
               <p className="mb-8 text-gray-300 dark:text-gray-600 text-sm font-medium leading-relaxed">
-                And in recent years, I`ve had opportunities in which I`ve been
-                working with{' '}
-                <span className="font-bold text-highlight">
-                  Javascript/Typescript with React
-                </span>{' '}
-                as the main library. In this ecosystem, I had contact with
-                retail e-commerce integrated with VTEX CMS, projects involving
-                RPA products and services and automation and internal and
-                back-office management systems.
+                In recent years, I have been working primarily with
+                JavaScript/TypeScript, using React as my main library. Within
+                this ecosystem, I have gained experience with retail e-commerce
+                platforms integrated with the VTEX CMS, projects involving RPA
+                and automation solutions, as well as internal and back-office
+                management systems. Over the past two years, I have been
+                involved in projects for clients in{' '}
+                <span className="font-bold text-highlight">North America</span>.
               </p>
             </div>
           </div>

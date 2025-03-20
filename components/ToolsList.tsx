@@ -16,13 +16,18 @@ import next from '../public/static/images/next.png'
 import tailwindcss from '../public/static/images/tailwindcss.png'
 import sass from '../public/static/images/sass.png'
 import postman from '../public/static/images/postman.png'
+import gatsby from '../public/static/images/gatsby.webp'
+import redux from '../public/static/images/redux.png'
+import drupal from '../public/static/images/drupal.png'
+import php from '../public/static/images/php.png'
+import postgress from '../public/static/images/postgresql.png'
 
 type toolsListType = {
   icon: React.ReactElement
   title: string
 }
 
-function NextImage(props: ImageProps) {
+function ToolIcon(props: ImageProps) {
   return (
     <Image {...props} className="w-5 h-5 sm:w-8 sm:h-8" alt={props.alt || ''} />
   )
@@ -31,52 +36,60 @@ function NextImage(props: ImageProps) {
 const ToolsList: React.FC = () => {
   const toolsList: toolsListType[] = [
     {
-      icon: <NextImage src={react} alt="react icon" />,
+      icon: <ToolIcon src={react} alt="react icon" />,
       title: 'React',
     },
     {
-      icon: <NextImage src={next} alt="next icon" />,
+      icon: <ToolIcon src={redux} alt="redux icon" />,
+      title: 'Redux',
+    },
+    {
+      icon: <ToolIcon src={next} alt="next icon" />,
       title: 'NextJS',
     },
     {
-      icon: <NextImage src={javascript} alt="javascript icon" />,
+      icon: <ToolIcon src={gatsby} alt="gatsby icon" />,
+      title: 'Gatsby',
+    },
+    {
+      icon: <ToolIcon src={javascript} alt="javascript icon" />,
       title: 'Javascript',
     },
     {
-      icon: <NextImage src={typescript} alt="typescript icon" />,
+      icon: <ToolIcon src={typescript} alt="typescript icon" />,
       title: 'Typescript',
     },
     {
-      icon: <NextImage src={tailwindcss} alt="tailwindcss icon" />,
+      icon: <ToolIcon src={tailwindcss} alt="tailwindcss icon" />,
       title: 'Tailwindcss',
     },
     {
-      icon: <NextImage src={sass} alt="sass icon" />,
+      icon: <ToolIcon src={sass} alt="sass icon" />,
       title: 'Sass',
     },
     {
-      icon: <NextImage src={node} alt="node icon" />,
+      icon: <ToolIcon src={node} alt="node icon" />,
       title: 'NodeJs',
     },
     {
-      icon: <NextImage src={postman} alt="postman icon" />,
+      icon: <ToolIcon src={postman} alt="postman icon" />,
       title: 'Postman',
     },
     {
-      icon: <NextImage src={webpack} alt="webpack icon" />,
+      icon: <ToolIcon src={webpack} alt="webpack icon" />,
       title: 'Webpack',
     },
     {
-      icon: <NextImage src={git} alt="git icon" />,
+      icon: <ToolIcon src={git} alt="git icon" />,
       title: 'Git + GitFlow',
     },
     {
-      icon: <NextImage src={docker} alt="docker icon" />,
+      icon: <ToolIcon src={docker} alt="docker icon" />,
       title: 'Docker',
     },
     {
       icon: (
-        <NextImage
+        <ToolIcon
           src={aws}
           alt="aws icon"
           className="contrast-50 dark:contrast-100 w-5 h-5 sm:w-8 sm:h-8"
@@ -85,16 +98,28 @@ const ToolsList: React.FC = () => {
       title: 'AWS Cloud',
     },
     {
-      icon: <NextImage src={graphql} alt="graphql icon" />,
+      icon: <ToolIcon src={graphql} alt="graphql icon" />,
       title: 'GraphQl',
     },
     {
-      icon: <NextImage src={jest} alt="jest icon" />,
+      icon: <ToolIcon src={jest} alt="jest icon" />,
       title: 'Jest',
     },
     {
-      icon: <NextImage src={figma} alt="figma icon" />,
+      icon: <ToolIcon src={figma} alt="figma icon" />,
       title: 'Figma',
+    },
+    {
+      icon: <ToolIcon src={drupal} alt="drupal icon" />,
+      title: 'Drupal',
+    },
+    {
+      icon: <ToolIcon src={php} alt="php icon" />,
+      title: 'PHP',
+    },
+    {
+      icon: <ToolIcon src={postgress} alt="postgress icon" />,
+      title: 'PostgreSQL',
     },
   ]
 
